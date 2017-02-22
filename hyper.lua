@@ -1,16 +1,18 @@
 -- A global variable for Hyper Mode
-hyperMode = hs.hotkey.modal.new({}, 'F18')
+hyperMode = hs.hotkey.modal.new({}, 'F19')
 
 -- Keybindings for launching apps in Hyper Mode
 hyperModeAppMappings = {
-  { 'a', 'iTunes' },                -- "A" for "Apple Music"
-  { 'b', 'Google Chrome' },         -- "B" for "Browser"
-  { 'c', 'Hackable Slack Client' }, -- "C for "Chat"
-  { 'd', 'Remember The Milk' },     -- "D" for "Do!" ... or "Done!"
-  { 'e', 'Atom Beta' },             -- "E" for "Editor"
-  { 'f', 'Finder' },                -- "F" for "Finder"
-  { 'g', 'Mailplane 3' },           -- "G" for "Gmail"
-  { 't', 'iTerm' },                 -- "T" for "Terminal"
+  { 'i', 'iTunes' },                
+  { 'a', 'Safari' },                
+  { 'v', 'nvALT' },                
+  { 'c', 'Google Chrome' },         
+  { 't', 'Tower' },                    
+  { 'k', 'Keyboard Maestro' },                    
+  { 's', 'Sublime Text' },             
+  { 'f', 'Finder' },                
+  { 'e', 'Mailplane 3' },           
+  { '1', 'iTerm' },                 
 }
 
 for i, mapping in ipairs(hyperModeAppMappings) do
@@ -19,15 +21,24 @@ for i, mapping in ipairs(hyperModeAppMappings) do
   end)
 end
 
--- Enter Hyper Mode when F17 (right option key) is pressed
-pressedF17 = function()
+-- Keybindings for sending the key out to other apps like Keyboard Maestro
+hyperKeyBindings = {'g','h'}
+
+for i,key in ipairs(hyperKeyBindings) do
+  hyperMode:bind({}, key, nil, function() hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, key)
+  end)
+end
+
+
+-- Enter Hyper Mode when F18 (right option key) is pressed
+pressedF18 = function()
   hyperMode:enter()
 end
 
--- Leave Hyper Mode when F17 (right option key) is released.
-releasedF17 = function()
+-- Leave Hyper Mode when F18 (right option key) is released.
+releasedF18 = function()
   hyperMode:exit()
 end
 
 -- Bind the Hyper key
-f17 = hs.hotkey.bind({}, 'F17', pressedF17, releasedF17)
+f18 = hs.hotkey.bind({}, 'F18', pressedF18, releasedF18)
