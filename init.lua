@@ -6,19 +6,7 @@ local log = hs.logger.new('init.lua', 'debug')
 require('hyper')
 
 hs.notify.new({title='Hammerspoon', informativeText='Ready to rock 🤘'}):send()
--- A global variable for the sub-key Hyper Mode
 
--- k = hs.hotkey.modal.new({}, 'F17')
-
--- -- Hyper-key for all the below are setup somewhere... Usually Keyboard Maestro or similar. Alfred doesn't handle them very well, so will set up separate bindings for individual apps below.
-
--- hyperBindings = {'§','c','m','a','b','d','e','f','g','h','i','j','k','l','m','n','p','q','r','t','1','2','3','4','5','6','7','8','9','0','d','g','s','f','TAB','v','b','O','-','s'}
-
--- for i,key in ipairs(hyperBindings) do
---   k:bind({}, key, nil, function() hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, key)
---     k.triggered = true
---   end)
--- end
 
 -- -- Code to launch single apps that Alfred used to handle.
 -- -- Hat-Tip: https://gist.github.com/ttscoff/cce98a711b5476166792d5e6f1ac5907
