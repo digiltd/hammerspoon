@@ -5,11 +5,7 @@ hs.hotkey.bind({'ctrl'}, '`', nil, function()
   hs.reload()
 end)
 
-keyUpDown = function(modifiers, key)
-  -- Un-comment & reload config to log each keystroke that we're triggering
-  -- log.d('Sending keystroke:', hs.inspect(modifiers), key)
-  hs.eventtap.keyStroke(modifiers, key, 0)
-end
+
 
 -- Subscribe to the necessary events on the given window filter such that the
 -- given hotkey is enabled for windows that match the window filter and disabled
@@ -86,10 +82,10 @@ hs.notify.new({title='Hammerspoon', informativeText='Ready to rock 🤘'}):send(
 
 -- f19 = hs.hotkey.bind({}, 'F18', pressedF18, releasedF18)
 
--- Miro window move/resize arrow keys - https://github.com/miromannino/hammerspoon-config
 
 
 -- hypershift = {"ctrl", "alt", "cmd", "shift"}
+
 
 require('watcher')
 require('position')
