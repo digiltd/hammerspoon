@@ -88,7 +88,7 @@ hs.notify.new({title='Hammerspoon', informativeText='Ready to rock 🤘'}):send(
 
 -- Miro window move/resize arrow keys - https://github.com/miromannino/hammerspoon-config
 
-hyper = {"ctrl", "alt", "cmd"}
+
 -- hypershift = {"ctrl", "alt", "cmd", "shift"}
 
 require('watcher')
