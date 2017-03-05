@@ -21,21 +21,12 @@ for i, mapping in ipairs(hyperModeAppMappings) do
   end)
 end
 
--- Keybindings for sending the key out to other apps like Keyboard Maestro
-hyperKeyBindings = {'g','h'}
-
-for i,key in ipairs(hyperKeyBindings) do
-  hyperMode:bind({}, key, nil, function() hs.eventtap.keyStroke({'cmd','alt','shift','ctrl'}, key)
-  end)
-end
-
-
--- Enter Hyper Mode when F18 (right option key) is pressed
+-- Enter Hyper Mode when F18 (capslock) is pressed
 pressedF18 = function()
   hyperMode:enter()
 end
 
--- Leave Hyper Mode when F18 (right option key) is released.
+-- Leave Hyper Mode when F18 (capslock) is released.
 releasedF18 = function()
   hyperMode:exit()
 end
