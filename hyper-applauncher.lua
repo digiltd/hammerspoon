@@ -10,6 +10,8 @@ hyperModeAppMappings = {
   { 't', 'Tower' },                    
   { 'k', 'Keyboard Maestro' },                    
   { 's', 'Sublime Text' },             
+  { 'r', 'Telegram' },             
+  { 'h', 'Slack' },  
   { 'f', 'Finder' },                
   { 'e', 'Mailplane 3' },           
   { '1', 'iTerm' },                 
