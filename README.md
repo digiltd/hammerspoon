@@ -1,10 +1,28 @@
 # My Hammerspoon config
 
-Not very exciting, but suits my needs. I use [ClickySteve's config](https://gist.github.com/clickysteve/e13a11b8fc9c963c08b3109d95bbacc5) as the base. This gives me the hyperkey that sends hyperkey+otherkey out to be picked up by Keyboard Maestro which has all my application shortcuts setup within it.
+Not very exciting, but suits my needs. 
 
-It also auto reloads Hammerspoon on save
+## Hyperkey
+
+`hyper-external.lua`
+
+Setup the hyperkey and send hyper+g to Keyboard Maestro
+
+## App launching
+
+`hyper-applauncher.lua`
+
+Basic app launching all done within Hammerspoon (it used to forward keystrokes to Keyboard Maestro but that got a bit messy)
+
 
 ## Window movement
 
-For window movement I am using [Miro's windows management](https://github.com/miromannino/hammerspoon-config). This gives me intuitive control over my windows using the arrow keys.
+`window-management.lua`
 
+For window movement I am using [Miro's windows management](https://github.com/miromannino/hammerspoon-config). This gives me intuitive control over my windows using the arrow keys without being too complicated.
+
+## Config reload
+
+`config-watcher.lua`
+
+Auto reloads Hammerspoon on save.
