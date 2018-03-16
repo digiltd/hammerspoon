@@ -180,3 +180,12 @@ hs.hotkey.bind(hyperPositionKey, "i", function ()
   cell = hs.grid.get(win, screen)
   hs.alert.show(cell)
 end)
+
+
+hs.hotkey.bind(hyperPositionKey, "m", function ()
+  local win = hs.window.focusedWindow()
+  local nextScreen = win:screen():next()
+  win:moveToScreen(nextScreen)
+end)
+
+
